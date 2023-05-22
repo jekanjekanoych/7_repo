@@ -1,0 +1,8 @@
+<form action="{%url 'add_to_group' %}" method="post">
+    {% csrf_token %}
+    {{form}}
+<!--{% for g in groups %}-->
+<!--{{ g.group_name }} <br>-->
+<!--{% endfor %}-->
+    <input type="submit" value="Submit">
+</form>

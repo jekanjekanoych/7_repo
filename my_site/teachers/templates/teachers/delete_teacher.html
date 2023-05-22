@@ -1,0 +1,9 @@
+<form action="{%url 'delete_teacher' %}" method="get">
+    {% csrf_token %}
+{% for teacher in teachers %}
+    {{ teacher.first_name }}
+    {{ teacher.last_name }}
+    {{ teacher.age }} <br>
+{% endfor %}
+    <input type="submit" value="Delete">
+</form>
