@@ -3,7 +3,6 @@ from django.http import HttpResponse, HttpResponseRedirect
 from django.urls import reverse
 
 
-
 from teachers.forms import TeacherForm
 from teachers.models import Teacher
 
@@ -43,7 +42,6 @@ def new_teacher(request):
         return HttpResponse(reverse("new_teacher"))
     form.save()
     return HttpResponseRedirect(reverse("teacher", args=[form.instance.id]))
-
 
 
 def delete_teacher(request):

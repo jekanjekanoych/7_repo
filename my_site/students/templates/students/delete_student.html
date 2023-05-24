@@ -1,6 +1,5 @@
 <form action="{%url 'delete_student' %}" method="get">
     {% csrf_token %}
-<!--    {{form}}-->
 {% for student in students %}
     {{ student.first_name }}
     {{ student.last_name }}

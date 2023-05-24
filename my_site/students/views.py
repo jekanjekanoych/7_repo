@@ -43,7 +43,6 @@ def new_student(request):
     return HttpResponseRedirect(reverse("student", args=[form.instance.id]))
 
 
-
 def delete_student(request):
     try:
         student = Student.objects.last()
@@ -52,5 +51,3 @@ def delete_student(request):
         return render(request, "delete_student.html", {"students": students})
     except AttributeError:
         return HttpResponseRedirect("/")
-
-

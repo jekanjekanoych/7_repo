@@ -22,7 +22,4 @@ def add_to_group(request):
     if not form.is_valid():
         return HttpResponse(reverse("index"))
     form.save()
-    return HttpResponseRedirect(reverse("index"))
-
-
-
+    return HttpResponseRedirect(reverse("add_to_group"))
